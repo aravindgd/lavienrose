@@ -26,4 +26,8 @@ Demo::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  #for devise to work this is an essential config, change in depolyment with domain name instead of the local host
+         config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end
