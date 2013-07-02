@@ -1,2 +1,16 @@
 <h1>Say#hello</h1>
-<p>Find me in app/views/say/hello.html.erb</p>
+<p> It is now <%= @time %>
+</p>
+Time to say <%= link_to "Goodbye", say_goodbye_path %>
+<p>
+<h1>Files in the current directory</h1>
+
+<p>
+    The files in the current directory are: 
+</p>
+<ul>    
+    <% for file in @files %>
+    <li><%= file; %></li>
+    <% end %>
+</ul>
+
