@@ -13,4 +13,13 @@ Time to say <%= link_to "Goodbye", say_goodbye_path %>
     <li><%= file; %></li>
     <% end %>
 </ul>
+<h1> Links </h1>
+<p>
+<% if user_signed_in? %>
+Hey signed in as <%= current_user.email %>.Not you? 
+<%= link_to 'logout', destroy_user_session_path, :method => "DELETE"%>
+<% else %>
+Hey <%= link_to "Login", new_user_session_path %> or Hey <%= link_to "Logup", new_user_registration_path %>
+<% end %>
+</p>
 
