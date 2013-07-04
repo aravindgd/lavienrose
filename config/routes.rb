@@ -1,5 +1,5 @@
 Demo::Application.routes.draw do
-devise_for :users, controllers: { sessions: 'sessions'}
+devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
   get "say/hello"
   get "say/goodbye"
   # The priority is based upon order of creation: first created -> highest priority.
